@@ -58,7 +58,7 @@ function handleOperator(val1, operator, val2) {
   else if (operator === '-') return val1 - val2;
   else if (operator === '*') return val1 * val2;
   else if (operator === '/') return val1 / val2;
-  else "연산자가 아닌것 같습니닷. 확인 부탁드려요!"
+  else return "연산자가 아닌것 같습니닷. 확인 부탁드려요!"
   // 코드를 작성해주세요.
 }
 
@@ -81,5 +81,5 @@ function handleScoresAdd(scores) {
   return scores.map((item) => item + 3)
 }
 
-console.log(scores);
+console.log(handleScoresAdd(scores));
 // 기대값: [39, 65, 75, 58, 89, 98, 95, 51, 84]

@@ -53,23 +53,24 @@ console.log(getNumbers(7)); // 결과값 "홀수";
 // 연산자와 함수, 조건문을 토대로 계산기 함수를 하나 만들어 보려고 합니다.
 // 함수에 숫자 , 연산자 , 숫자 세 개의 매개변수를 넣었을 때 해당 연산자를 기준으로 연산을 해서 값을 반환하는 함수를 만들어주세요.
 
-function 함수명(매개변수1, 매개변수2, 매개변수3) {
-  if (매개변수2 === '+') return 매개변수1 + 매개변수3;
-  else if (매개변수2 === '-') return 매개변수1 - 매개변수3;
-  else if (매개변수2 === '*') return 매개변수1 * 매개변수3;
-  else if (매개변수2 === '/') return 매개변수1 / 매개변수3;
+function handleOperator(val1, operator, val2) {
+  if (operator === '+') return val1 + val2;
+  else if (operator === '-') return val1 - val2;
+  else if (operator === '*') return val1 * val2;
+  else if (operator === '/') return val1 / val2;
   else "연산자가 아닌것 같습니닷. 확인 부탁드려요!"
   // 코드를 작성해주세요.
 }
 
-함수명(3, "+", 6); // 결과값 9
-함수명(11, "-", 6); // 결과값 5
-함수명(6, "*", 3); // 결과값 18
-함수명(15, "/", 3); // 결과값 5
+handleOperator(3, "+", 6); // 결과값 9
+handleOperator(11, "-", 6); // 결과값 5
+handleOperator(6, "*", 3); // 결과값 18
+handleOperator(15, "/", 3); // 결과값 5
 
 // ## 5. 평균 점수 구하기 [선택 문제]
 // 5번 문제는 필수 문제가 아닌, 4번까지 풀고 여유가 있을 때 풀어보는 선택 문제입니다.
 const solution = n => n.reduce((a, b) => a + b / n.length, 0);
+console.log(solution([36, 62, 72, 55, 86, 95, 92, 48, 81]));
 
 // 학교에서 시험을 보았는데 전산 문제로 한 문제의 답이 전부 오답처리가 된 바람에 학생들의 점수를 전부 3점씩 올려주어야 합니다. 
 // scores에 있는 학생들의 점수를 반복문을 통해 3점씩 올리게 고쳐주시는데 4번 문제를 통해 만든 계산기 함수를 통해 더해주세요.
